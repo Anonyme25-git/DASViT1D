@@ -55,7 +55,7 @@ Fiber-optic **ϕ-OTDR/DAS** turns standard fiber into a dense acoustic sensor ar
 - **FNR**: ~**0.9%** • **NAR**: ~**0.5%**  
 - **Inference latency**: ~**0.13 s / sample**
 
-> Figures above are reported from the accompanying paper (see citation) with fixed splits and identical preprocessing.
+> Figures provide in "Result_figures" are reported from the accompanying paper (see citation) with fixed splits and identical preprocessing.
 
 ---
 
