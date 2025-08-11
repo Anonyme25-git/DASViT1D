@@ -81,7 +81,7 @@ If you use this repository or reproduce the results, please cite:
 
 **Reference**
 Michel Dione, Jerry Lonlac, Stéphane Lecoeuche, Anthony Fleury.  
-*Intrusion Pattern Recognition in DAS Using Multi-Domain Features and a Transformer Network*, ICPRS, 2025.
+*Intrusion Pattern Recognition in DAS System Using Multi-Domain Features and Transformer Network*, ICPRS, 2025.
 
 
 **BibTeX (update with final proceedings details)**
