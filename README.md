@@ -44,7 +44,7 @@ Fiber-optic **ϕ-OTDR/DAS** turns standard fiber into a dense acoustic sensor ar
    - **DWT** (e.g., Daubechies-4, 3 levels) for time-frequency localization.
    - **Fusion**: concatenate MFCC + RDFT + DWT; **normalize** (fit scaler on train only).
 
-2) **Model**
+2) **Model : DASViT1D**
    - **1D patching** of fused sequences → linear projection + positional encoding.  
    - **Transformer encoder** (MHSA) → classification head (9 classes).
 
