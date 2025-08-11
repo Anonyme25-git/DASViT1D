@@ -1,16 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Jun 13 10:40:10 2025
-
-@author: michel
-"""
-
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Jun 13 10:01:08 2025
-
-@author: michel
-"""
 
 # -*- coding: utf-8 -*-
 """
@@ -96,7 +83,7 @@ class ViT1D(nn.Module):
 
 import pickle
 
-# Charger les splits
+
 with open("splits/split_indices.pkl", "rb") as f:
     split_dict = pickle.load(f)
 
@@ -104,12 +91,12 @@ train_idx = split_dict['train_idx']
 val_idx = split_dict['val_idx']
 test_idx = split_dict['test_idx']
 
-# Charger ton dataset spécifique (ex: MFCC ou RDFT)
+
 data_total = pd.read_csv("dwt_feat_data.csv", header=None)
 X = data_total.iloc[:, :-1].values
 y = data_total.iloc[:, -1].values
 
-# Appliquer les splits
+
 X_train = X[train_idx]
 y_train = y[train_idx]
 X_val   = X[val_idx]
@@ -167,7 +154,6 @@ import torch
 from sklearn.utils.class_weight import compute_class_weight
 
 
-# Tes étiquettes de train sous forme d'entiers
 unique_classes = np.unique(y_train)
 class_weights = compute_class_weight(
     class_weight='balanced',
@@ -175,15 +161,14 @@ class_weights = compute_class_weight(
     y=y_train
 )
 
-# Transformer en Tensor
+
 class_weights = [1.35916111, 0.35037818, 1.35349794, 2.6674777,  0.63500338, 1.70271145, 0.69591896, 2.09273841, 4.55382485]
 weights_tensor = torch.tensor(class_weights, dtype=torch.float32).to(device)
 
 
 model = ViT1D().to(device)
 
-# Définir la perte et l'optimiseur
-# criterion = nn.CrossEntropyLoss()
+
 criterion = nn.CrossEntropyLoss(weights_tensor)
 optimizer = torch.optim.Adam(model.parameters(), lr=3e-4, weight_decay=1e-5)
 
@@ -289,29 +274,24 @@ sns.heatmap(df, fmt='g', annot=True, robust=True,
             annot_kws={'size': 12},
             xticklabels=['Car','Fence', 'Longboard', 'Manip', 'Manhole', 'Regular', 'Construction','Running','Walking'],
             yticklabels=['Car','Fence', 'Longboard', 'Manip', 'Manhole', 'Regular', 'Construction','Running','Walking'],
-            cmap='Reds',  # plus proche de l'image que 'Reds'
+            cmap='Reds',  
             linewidths=0.5, linecolor='white', square=True, cbar=True)
 
-# Ajustements axes
+
 ax.set_xlabel('Predicted label', fontsize=14)
 ax.set_ylabel('True label', fontsize=14)
 
-# Rotation X ticks
 plt.xticks(rotation=45, ha='right', fontsize=12)
 plt.yticks(rotation=0, fontsize=12)
 
-# Colorbar style
 cbar = ax.collections[0].colorbar
 cbar.ax.tick_params(labelsize=12)
 
-# Marges plus serrées
 plt.tight_layout()
 
-# Sauvegarde
 plt.savefig('confusion_matrix_paper_style.png', dpi=300)
 plt.show()
 
-# Métriques
 Acc = np.trace(C) / np.sum(C)
 print('Accuracy: %.4f' % Acc)
 NAR = (np.sum(C[5]) - C[5][5]) / np.sum(C[:, 1:])
