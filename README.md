@@ -75,13 +75,6 @@ pip install torch numpy scipy scikit-learn librosa pywt matplotlib tqdm
 
 
 
-## Acknowledgments
-Supported by France 2030 (INFRAlight, ADEME) and co-funded by the European Union (NextGenerationEU).
-We also thank IMT Nord Europe and the maintainers of the public ϕ-OTDR dataset (DOI: https://doi.org/10.6084/m9.figshare.27004732).
-
-## Citation
-
-If you use this repository or reproduce the results, please cite:
 
 **Reference**
 Michel Dione, Jerry Lonlac, Stéphane Lecoeuche, Anthony Fleury.  
@@ -96,4 +89,12 @@ Michel Dione, Jerry Lonlac, Stéphane Lecoeuche, Anthony Fleury.
   year      = {2025},
   note      = {Code: https://github.com/mikeDione27/DASViT1D}
 }
+
+## Acknowledgments
+Supported by France 2030 (INFRAlight, ADEME) and co-funded by the European Union (NextGenerationEU).
+We also thank IMT Nord Europe and the maintainers of the public ϕ-OTDR dataset (DOI: https://doi.org/10.6084/m9.figshare.27004732).
+
+## Citation
+
+If you use this repository or reproduce the results, please cite:
 
