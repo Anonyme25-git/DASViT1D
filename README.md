@@ -84,7 +84,7 @@ Michel Dione, Jerry Lonlac, Stéphane Lecoeuche, Anthony Fleury.
 ```bibtex
 @inproceedings{Dione2025DASViT1D,
   title     = {Intrusion Pattern Recognition in DAS Using Multi-Domain Features and a Transformer Network},
-  author    = {Dione, Michel and Lonlac, Jerry and Lecoeuche, St{\'e}phane and Fleury, Anthony},
+  author    = {Dione Michel, Lonlac Jerry, Lecoeuche Stéphane and Fleury Anthony},
   booktitle = {Proceedings of ICPRS},
   year      = {2025},
   note      = {Code: https://github.com/mikeDione27/DASViT1D}
