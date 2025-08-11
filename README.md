@@ -72,3 +72,28 @@ pip install -U pip
 pip install torch numpy scipy scikit-learn librosa pywt matplotlib tqdm
 # or:
 # pip install -r requirements.txt
+
+
+
+## Acknowledgments
+Supported by France 2030 (INFRAlight, ADEME) and co-funded by the European Union (NextGenerationEU).
+We also thank IMT Nord Europe and the maintainers of the public ϕ-OTDR dataset (DOI: https://doi.org/10.6084/m9.figshare.27004732).
+
+## Citation
+
+If you use this repository or reproduce the results, please cite:
+
+**Reference**
+Michel Dione, Jerry Lonlac, Stéphane Lecoeuche, Anthony Fleury.  
+*Intrusion Pattern Recognition in DAS Using Multi-Domain Features and a Transformer Network*, ICPRS, 2025.
+
+**BibTeX (update with final proceedings details)**
+```bibtex
+@inproceedings{Dione2025DASViT1D,
+  title     = {Intrusion Pattern Recognition in DAS Using Multi-Domain Features and a Transformer Network},
+  author    = {Dione, Michel and Lonlac, Jerry and Lecoeuche, St{\'e}phane and Fleury, Anthony},
+  booktitle = {Proceedings of ICPRS},
+  year      = {2025},
+  note      = {Code: https://github.com/mikeDione27/DASViT1D}
+}
+
