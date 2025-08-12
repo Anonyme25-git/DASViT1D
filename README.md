@@ -18,9 +18,7 @@
 - [Repository Structure](#repository-structure)
 - [Reference Hyperparameters](#reference-hyperparameters)
 - [Reproducibility](#reproducibility)
-- [Citation](#citation)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
+
 
 ---
 
