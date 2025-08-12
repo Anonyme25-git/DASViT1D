@@ -2,7 +2,6 @@
 """
 Created on Mon Jun  2 18:14:53 2025
 
-@author: michel
 """
 import sys
 import logging
