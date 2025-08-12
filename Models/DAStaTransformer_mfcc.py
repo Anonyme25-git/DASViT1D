@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Jun 13 10:01:08 2025
-
-@author: michel
 """
 
 # -*- coding: utf-8 -*-
